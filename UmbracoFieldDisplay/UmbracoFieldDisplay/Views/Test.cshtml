@@ -1,0 +1,8 @@
+﻿@using ContentModels = Umbraco.Web.PublishedContentModels;
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Test>
+@{
+	Layout = null;
+}
+@Model.GetPropertyValue("bodyText");
+
+@Html.ActionLink("test1","Test1","Test");

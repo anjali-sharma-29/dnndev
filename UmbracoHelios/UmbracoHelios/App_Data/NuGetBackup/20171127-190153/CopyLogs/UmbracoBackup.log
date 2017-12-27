@@ -1,0 +1,26 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : 27 November 2017 07:01:54 PM
+   Source : C:\users\kiprosh\documents\visual studio 2017\Projects\UmbracoHelios\UmbracoHelios\Umbraco\
+     Dest : C:\users\kiprosh\documents\visual studio 2017\Projects\UmbracoHelios\UmbracoHelios\App_Data\NuGetBackup\20171127-190153\Umbraco\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                   0	C:\users\kiprosh\documents\visual studio 2017\Projects\UmbracoHelios\UmbracoHelios\Umbraco\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         0         0         0         0
+   Files :         0         0         0         0         0         0
+   Bytes :         0         0         0         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : 27 November 2017 07:01:54 PM
+

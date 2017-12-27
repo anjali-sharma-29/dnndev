@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "Master.cshtml";
+}
+
+@* the fun starts here *@
+
+<html>
+    <head>
+       <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+    <body style="background-image:url('/media/1007/background1.jpg');
+			height:100%;
+			background-position:center;
+			background-repeat:no-repeat;
+			background-size:cover;">
+        <div class="tab" ><b>
+            <a href="#">Home</a>
+            <a href="#">Articles</a>
+            <a href="#">Contact us</a></b>
+        </div>
+        <div>
+            <br><br>
+            @RenderBody();
+        </div>
+    </body>
+</html>

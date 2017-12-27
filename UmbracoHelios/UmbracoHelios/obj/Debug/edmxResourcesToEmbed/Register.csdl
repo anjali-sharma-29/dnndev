@@ -1,0 +1,1259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RegisterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="RegisterUser">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="RegisterEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="RegisterUsers" EntityType="Self.RegisterUser" />
+    <EntitySet Name="cmsContents" EntityType="RegisterModel.cmsContent" />
+    <EntitySet Name="cmsContentTypes" EntityType="RegisterModel.cmsContentType" />
+    <EntitySet Name="cmsContentTypeAllowedContentTypes" EntityType="RegisterModel.cmsContentTypeAllowedContentType" />
+    <EntitySet Name="cmsContentVersions" EntityType="RegisterModel.cmsContentVersion" />
+    <EntitySet Name="cmsContentXmls" EntityType="RegisterModel.cmsContentXml" />
+    <EntitySet Name="cmsDataTypes" EntityType="RegisterModel.cmsDataType" />
+    <EntitySet Name="cmsDataTypePreValues" EntityType="RegisterModel.cmsDataTypePreValue" />
+    <EntitySet Name="cmsDictionaries" EntityType="RegisterModel.cmsDictionary" />
+    <EntitySet Name="cmsDocuments" EntityType="RegisterModel.cmsDocument" />
+    <EntitySet Name="cmsDocumentTypes" EntityType="RegisterModel.cmsDocumentType" />
+    <EntitySet Name="cmsLanguageTexts" EntityType="RegisterModel.cmsLanguageText" />
+    <EntitySet Name="cmsMacroes" EntityType="RegisterModel.cmsMacro" />
+    <EntitySet Name="cmsMacroProperties" EntityType="RegisterModel.cmsMacroProperty" />
+    <EntitySet Name="cmsMembers" EntityType="RegisterModel.cmsMember" />
+    <EntitySet Name="cmsMemberTypes" EntityType="RegisterModel.cmsMemberType" />
+    <EntitySet Name="cmsPreviewXmls" EntityType="RegisterModel.cmsPreviewXml" />
+    <EntitySet Name="cmsPropertyDatas" EntityType="RegisterModel.cmsPropertyData" />
+    <EntitySet Name="cmsPropertyTypes" EntityType="RegisterModel.cmsPropertyType" />
+    <EntitySet Name="cmsPropertyTypeGroups" EntityType="RegisterModel.cmsPropertyTypeGroup" />
+    <EntitySet Name="cmsTagRelationships" EntityType="RegisterModel.cmsTagRelationship" />
+    <EntitySet Name="cmsTags" EntityType="RegisterModel.cmsTag" />
+    <EntitySet Name="cmsTasks" EntityType="RegisterModel.cmsTask" />
+    <EntitySet Name="cmsTaskTypes" EntityType="RegisterModel.cmsTaskType" />
+    <EntitySet Name="cmsTemplates" EntityType="RegisterModel.cmsTemplate" />
+    <EntitySet Name="Signups" EntityType="RegisterModel.Signup" />
+    <EntitySet Name="umbracoAccesses" EntityType="RegisterModel.umbracoAccess" />
+    <EntitySet Name="umbracoAccessRules" EntityType="RegisterModel.umbracoAccessRule" />
+    <EntitySet Name="umbracoCacheInstructions" EntityType="RegisterModel.umbracoCacheInstruction" />
+    <EntitySet Name="umbracoDomains" EntityType="RegisterModel.umbracoDomain" />
+    <EntitySet Name="umbracoExternalLogins" EntityType="RegisterModel.umbracoExternalLogin" />
+    <EntitySet Name="umbracoLanguages" EntityType="RegisterModel.umbracoLanguage" />
+    <EntitySet Name="umbracoLocks" EntityType="RegisterModel.umbracoLock" />
+    <EntitySet Name="umbracoLogs" EntityType="RegisterModel.umbracoLog" />
+    <EntitySet Name="umbracoMigrations" EntityType="RegisterModel.umbracoMigration" />
+    <EntitySet Name="umbracoNodes" EntityType="RegisterModel.umbracoNode" />
+    <EntitySet Name="umbracoRedirectUrls" EntityType="RegisterModel.umbracoRedirectUrl" />
+    <EntitySet Name="umbracoRelations" EntityType="RegisterModel.umbracoRelation" />
+    <EntitySet Name="umbracoRelationTypes" EntityType="RegisterModel.umbracoRelationType" />
+    <EntitySet Name="umbracoServers" EntityType="RegisterModel.umbracoServer" />
+    <EntitySet Name="umbracoUsers" EntityType="RegisterModel.umbracoUser" />
+    <EntitySet Name="umbracoUser2NodeNotify" EntityType="RegisterModel.umbracoUser2NodeNotify" />
+    <EntitySet Name="umbracoUserGroups" EntityType="RegisterModel.umbracoUserGroup" />
+    <EntitySet Name="umbracoUserGroup2App" EntityType="RegisterModel.umbracoUserGroup2App" />
+    <EntitySet Name="umbracoUserGroup2NodePermission" EntityType="RegisterModel.umbracoUserGroup2NodePermission" />
+    <EntitySet Name="umbracoUserStartNodes" EntityType="RegisterModel.umbracoUserStartNode" />
+    <AssociationSet Name="FK_cmsContent_umbracoNode_id" Association="RegisterModel.FK_cmsContent_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="cmsContent" EntitySet="cmsContents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsContentType_umbracoNode_id" Association="RegisterModel.FK_cmsContentType_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="cmsContentType" EntitySet="cmsContentTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsDataType_umbracoNode_id" Association="RegisterModel.FK_cmsDataType_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="cmsDataType" EntitySet="cmsDataTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsDocument_umbracoNode_id" Association="RegisterModel.FK_cmsDocument_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="cmsDocument" EntitySet="cmsDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsDocumentType_umbracoNode_id" Association="RegisterModel.FK_cmsDocumentType_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="cmsDocumentType" EntitySet="cmsDocumentTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsLanguageText_umbracoLanguage_id" Association="RegisterModel.FK_cmsLanguageText_umbracoLanguage_id">
+      <End Role="umbracoLanguage" EntitySet="umbracoLanguages" />
+      <End Role="cmsLanguageText" EntitySet="cmsLanguageTexts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsMacroProperty_cmsMacro_id" Association="RegisterModel.FK_cmsMacroProperty_cmsMacro_id">
+      <End Role="cmsMacro" EntitySet="cmsMacroes" />
+      <End Role="cmsMacroProperty" EntitySet="cmsMacroProperties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsMember_umbracoNode_id" Association="RegisterModel.FK_cmsMember_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="cmsMember" EntitySet="cmsMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsMemberType_umbracoNode_id" Association="RegisterModel.FK_cmsMemberType_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="cmsMemberType" EntitySet="cmsMemberTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsPropertyData_cmsPropertyType_id" Association="RegisterModel.FK_cmsPropertyData_cmsPropertyType_id">
+      <End Role="cmsPropertyType" EntitySet="cmsPropertyTypes" />
+      <End Role="cmsPropertyData" EntitySet="cmsPropertyDatas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsPropertyData_umbracoNode_id" Association="RegisterModel.FK_cmsPropertyData_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="cmsPropertyData" EntitySet="cmsPropertyDatas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsPropertyType_cmsPropertyTypeGroup_id" Association="RegisterModel.FK_cmsPropertyType_cmsPropertyTypeGroup_id">
+      <End Role="cmsPropertyTypeGroup" EntitySet="cmsPropertyTypeGroups" />
+      <End Role="cmsPropertyType" EntitySet="cmsPropertyTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsTagRelationship_cmsPropertyType" Association="RegisterModel.FK_cmsTagRelationship_cmsPropertyType">
+      <End Role="cmsPropertyType" EntitySet="cmsPropertyTypes" />
+      <End Role="cmsTagRelationship" EntitySet="cmsTagRelationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsTagRelationship_cmsTags_id" Association="RegisterModel.FK_cmsTagRelationship_cmsTags_id">
+      <End Role="cmsTag" EntitySet="cmsTags" />
+      <End Role="cmsTagRelationship" EntitySet="cmsTagRelationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsTags_cmsTags" Association="RegisterModel.FK_cmsTags_cmsTags">
+      <End Role="cmsTag" EntitySet="cmsTags" />
+      <End Role="cmsTag1" EntitySet="cmsTags" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsTask_cmsTaskType_id" Association="RegisterModel.FK_cmsTask_cmsTaskType_id">
+      <End Role="cmsTaskType" EntitySet="cmsTaskTypes" />
+      <End Role="cmsTask" EntitySet="cmsTasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsTask_umbracoNode_id" Association="RegisterModel.FK_cmsTask_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="cmsTask" EntitySet="cmsTasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsTask_umbracoUser" Association="RegisterModel.FK_cmsTask_umbracoUser">
+      <End Role="umbracoUser" EntitySet="umbracoUsers" />
+      <End Role="cmsTask" EntitySet="cmsTasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsTask_umbracoUser1" Association="RegisterModel.FK_cmsTask_umbracoUser1">
+      <End Role="umbracoUser" EntitySet="umbracoUsers" />
+      <End Role="cmsTask" EntitySet="cmsTasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsTemplate_umbracoNode" Association="RegisterModel.FK_cmsTemplate_umbracoNode">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="cmsTemplate" EntitySet="cmsTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoAccess_umbracoNode_id" Association="RegisterModel.FK_umbracoAccess_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="umbracoAccess" EntitySet="umbracoAccesses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoAccess_umbracoNode_id1" Association="RegisterModel.FK_umbracoAccess_umbracoNode_id1">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="umbracoAccess" EntitySet="umbracoAccesses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoAccess_umbracoNode_id2" Association="RegisterModel.FK_umbracoAccess_umbracoNode_id2">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="umbracoAccess" EntitySet="umbracoAccesses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoAccessRule_umbracoAccess_id" Association="RegisterModel.FK_umbracoAccessRule_umbracoAccess_id">
+      <End Role="umbracoAccess" EntitySet="umbracoAccesses" />
+      <End Role="umbracoAccessRule" EntitySet="umbracoAccessRules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoDomains_umbracoNode_id" Association="RegisterModel.FK_umbracoDomains_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="umbracoDomain" EntitySet="umbracoDomains" />
+    </AssociationSet>
+    <AssociationSet Name="FK_startContentId_umbracoNode_id" Association="RegisterModel.FK_startContentId_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="umbracoUserGroup" EntitySet="umbracoUserGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_startMediaId_umbracoNode_id" Association="RegisterModel.FK_startMediaId_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="umbracoUserGroup" EntitySet="umbracoUserGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoNode_umbracoNode_id" Association="RegisterModel.FK_umbracoNode_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="umbracoNode1" EntitySet="umbracoNodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoRelation_umbracoNode" Association="RegisterModel.FK_umbracoRelation_umbracoNode">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="umbracoRelation" EntitySet="umbracoRelations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoRelation_umbracoNode1" Association="RegisterModel.FK_umbracoRelation_umbracoNode1">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="umbracoRelation" EntitySet="umbracoRelations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUser2NodeNotify_umbracoNode_id" Association="RegisterModel.FK_umbracoUser2NodeNotify_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="umbracoUser2NodeNotify" EntitySet="umbracoUser2NodeNotify" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUserGroup2NodePermission_umbracoNode_id" Association="RegisterModel.FK_umbracoUserGroup2NodePermission_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="umbracoUserGroup2NodePermission" EntitySet="umbracoUserGroup2NodePermission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUserStartNode_umbracoNode_id" Association="RegisterModel.FK_umbracoUserStartNode_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="umbracoUserStartNode" EntitySet="umbracoUserStartNodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoRelation_umbracoRelationType_id" Association="RegisterModel.FK_umbracoRelation_umbracoRelationType_id">
+      <End Role="umbracoRelationType" EntitySet="umbracoRelationTypes" />
+      <End Role="umbracoRelation" EntitySet="umbracoRelations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUser2NodeNotify_umbracoUser_id" Association="RegisterModel.FK_umbracoUser2NodeNotify_umbracoUser_id">
+      <End Role="umbracoUser" EntitySet="umbracoUsers" />
+      <End Role="umbracoUser2NodeNotify" EntitySet="umbracoUser2NodeNotify" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUserStartNode_umbracoUser_id" Association="RegisterModel.FK_umbracoUserStartNode_umbracoUser_id">
+      <End Role="umbracoUser" EntitySet="umbracoUsers" />
+      <End Role="umbracoUserStartNode" EntitySet="umbracoUserStartNodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUserGroup2App_umbracoUserGroup_id" Association="RegisterModel.FK_umbracoUserGroup2App_umbracoUserGroup_id">
+      <End Role="umbracoUserGroup" EntitySet="umbracoUserGroups" />
+      <End Role="umbracoUserGroup2App" EntitySet="umbracoUserGroup2App" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUserGroup2NodePermission_umbracoUserGroup_id" Association="RegisterModel.FK_umbracoUserGroup2NodePermission_umbracoUserGroup_id">
+      <End Role="umbracoUserGroup" EntitySet="umbracoUserGroups" />
+      <End Role="umbracoUserGroup2NodePermission" EntitySet="umbracoUserGroup2NodePermission" />
+    </AssociationSet>
+    <AssociationSet Name="cmsContentType2ContentType" Association="RegisterModel.cmsContentType2ContentType">
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+      <End Role="umbracoNode1" EntitySet="umbracoNodes" />
+    </AssociationSet>
+    <AssociationSet Name="cmsMember2MemberGroup" Association="RegisterModel.cmsMember2MemberGroup">
+      <End Role="cmsMember" EntitySet="cmsMembers" />
+      <End Role="umbracoNode" EntitySet="umbracoNodes" />
+    </AssociationSet>
+    <AssociationSet Name="umbracoUser2UserGroup" Association="RegisterModel.umbracoUser2UserGroup">
+      <End Role="umbracoUser" EntitySet="umbracoUsers" />
+      <End Role="umbracoUserGroup" EntitySet="umbracoUserGroups" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="cmsContent">
+    <Key>
+      <PropertyRef Name="pk" />
+    </Key>
+    <Property Name="pk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="contentType" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_cmsContent_umbracoNode_id" FromRole="cmsContent" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="cmsContentType">
+    <Key>
+      <PropertyRef Name="pk" />
+    </Key>
+    <Property Name="pk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="alias" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="icon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="thumbnail" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="isContainer" Type="Boolean" Nullable="false" />
+    <Property Name="allowAtRoot" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_cmsContentType_umbracoNode_id" FromRole="cmsContentType" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="cmsContentTypeAllowedContentType">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="AllowedId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="AllowedId" Type="Int32" Nullable="false" />
+    <Property Name="SortOrder" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cmsContentVersion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContentId" Type="Int32" Nullable="false" />
+    <Property Name="VersionId" Type="Guid" Nullable="false" />
+    <Property Name="VersionDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="cmsContentXml">
+    <Key>
+      <PropertyRef Name="nodeId" />
+    </Key>
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="xml" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cmsDataType">
+    <Key>
+      <PropertyRef Name="pk" />
+    </Key>
+    <Property Name="pk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="propertyEditorAlias" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="dbType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_cmsDataType_umbracoNode_id" FromRole="cmsDataType" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="cmsDataTypePreValue">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datatypeNodeId" Type="Int32" Nullable="false" />
+    <Property Name="value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sortorder" Type="Int32" Nullable="false" />
+    <Property Name="alias" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cmsDictionary">
+    <Key>
+      <PropertyRef Name="pk" />
+    </Key>
+    <Property Name="pk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="parent" Type="Guid" />
+    <Property Name="key" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cmsDocument">
+    <Key>
+      <PropertyRef Name="versionId" />
+    </Key>
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="published" Type="Boolean" Nullable="false" />
+    <Property Name="documentUser" Type="Int32" Nullable="false" />
+    <Property Name="versionId" Type="Guid" Nullable="false" />
+    <Property Name="text" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="releaseDate" Type="DateTime" Precision="3" />
+    <Property Name="expireDate" Type="DateTime" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="templateId" Type="Int32" />
+    <Property Name="newest" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_cmsDocument_umbracoNode_id" FromRole="cmsDocument" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="cmsDocumentType">
+    <Key>
+      <PropertyRef Name="contentTypeNodeId" />
+      <PropertyRef Name="templateNodeId" />
+    </Key>
+    <Property Name="contentTypeNodeId" Type="Int32" Nullable="false" />
+    <Property Name="templateNodeId" Type="Int32" Nullable="false" />
+    <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_cmsDocumentType_umbracoNode_id" FromRole="cmsDocumentType" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="cmsLanguageText">
+    <Key>
+      <PropertyRef Name="pk" />
+    </Key>
+    <Property Name="pk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="languageId" Type="Int32" Nullable="false" />
+    <Property Name="UniqueId" Type="Guid" Nullable="false" />
+    <Property Name="value" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoLanguage" Relationship="RegisterModel.FK_cmsLanguageText_umbracoLanguage_id" FromRole="cmsLanguageText" ToRole="umbracoLanguage" />
+  </EntityType>
+  <EntityType Name="cmsMacro">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uniqueId" Type="Guid" Nullable="false" />
+    <Property Name="macroUseInEditor" Type="Boolean" Nullable="false" />
+    <Property Name="macroRefreshRate" Type="Int32" Nullable="false" />
+    <Property Name="macroAlias" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="macroName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="macroScriptType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="macroScriptAssembly" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="macroXSLT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="macroCacheByPage" Type="Boolean" Nullable="false" />
+    <Property Name="macroCachePersonalized" Type="Boolean" Nullable="false" />
+    <Property Name="macroDontRender" Type="Boolean" Nullable="false" />
+    <Property Name="macroPython" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="cmsMacroProperties" Relationship="RegisterModel.FK_cmsMacroProperty_cmsMacro_id" FromRole="cmsMacro" ToRole="cmsMacroProperty" />
+  </EntityType>
+  <EntityType Name="cmsMacroProperty">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uniquePropertyId" Type="Guid" Nullable="false" />
+    <Property Name="editorAlias" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="macro" Type="Int32" Nullable="false" />
+    <Property Name="macroPropertySortOrder" Type="Int32" Nullable="false" />
+    <Property Name="macroPropertyAlias" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="macroPropertyName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="cmsMacro" Relationship="RegisterModel.FK_cmsMacroProperty_cmsMacro_id" FromRole="cmsMacroProperty" ToRole="cmsMacro" />
+  </EntityType>
+  <EntityType Name="cmsMember">
+    <Key>
+      <PropertyRef Name="nodeId" />
+    </Key>
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="LoginName" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_cmsMember_umbracoNode_id" FromRole="cmsMember" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoNodes" Relationship="RegisterModel.cmsMember2MemberGroup" FromRole="cmsMember" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="cmsMemberType">
+    <Key>
+      <PropertyRef Name="pk" />
+    </Key>
+    <Property Name="pk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NodeId" Type="Int32" Nullable="false" />
+    <Property Name="propertytypeId" Type="Int32" Nullable="false" />
+    <Property Name="memberCanEdit" Type="Boolean" Nullable="false" />
+    <Property Name="viewOnProfile" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_cmsMemberType_umbracoNode_id" FromRole="cmsMemberType" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="cmsPreviewXml">
+    <Key>
+      <PropertyRef Name="nodeId" />
+      <PropertyRef Name="versionId" />
+    </Key>
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="versionId" Type="Guid" Nullable="false" />
+    <Property Name="timestamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="xml" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cmsPropertyData">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="contentNodeId" Type="Int32" Nullable="false" />
+    <Property Name="versionId" Type="Guid" />
+    <Property Name="propertytypeid" Type="Int32" Nullable="false" />
+    <Property Name="dataInt" Type="Int32" />
+    <Property Name="dataDecimal" Type="Decimal" Precision="38" Scale="6" />
+    <Property Name="dataDate" Type="DateTime" Precision="3" />
+    <Property Name="dataNvarchar" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="dataNtext" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="cmsPropertyType" Relationship="RegisterModel.FK_cmsPropertyData_cmsPropertyType_id" FromRole="cmsPropertyData" ToRole="cmsPropertyType" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_cmsPropertyData_umbracoNode_id" FromRole="cmsPropertyData" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="cmsPropertyType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dataTypeId" Type="Int32" Nullable="false" />
+    <Property Name="contentTypeId" Type="Int32" Nullable="false" />
+    <Property Name="propertyTypeGroupId" Type="Int32" />
+    <Property Name="Alias" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sortOrder" Type="Int32" Nullable="false" />
+    <Property Name="mandatory" Type="Boolean" Nullable="false" />
+    <Property Name="validationRegExp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="UniqueID" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="cmsPropertyDatas" Relationship="RegisterModel.FK_cmsPropertyData_cmsPropertyType_id" FromRole="cmsPropertyType" ToRole="cmsPropertyData" />
+    <NavigationProperty Name="cmsPropertyTypeGroup" Relationship="RegisterModel.FK_cmsPropertyType_cmsPropertyTypeGroup_id" FromRole="cmsPropertyType" ToRole="cmsPropertyTypeGroup" />
+    <NavigationProperty Name="cmsTagRelationships" Relationship="RegisterModel.FK_cmsTagRelationship_cmsPropertyType" FromRole="cmsPropertyType" ToRole="cmsTagRelationship" />
+  </EntityType>
+  <EntityType Name="cmsPropertyTypeGroup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="contenttypeNodeId" Type="Int32" Nullable="false" />
+    <Property Name="text" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sortorder" Type="Int32" Nullable="false" />
+    <Property Name="uniqueID" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="cmsPropertyTypes" Relationship="RegisterModel.FK_cmsPropertyType_cmsPropertyTypeGroup_id" FromRole="cmsPropertyTypeGroup" ToRole="cmsPropertyType" />
+  </EntityType>
+  <EntityType Name="cmsTagRelationship">
+    <Key>
+      <PropertyRef Name="nodeId" />
+      <PropertyRef Name="tagId" />
+      <PropertyRef Name="propertyTypeId" />
+    </Key>
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="tagId" Type="Int32" Nullable="false" />
+    <Property Name="propertyTypeId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="cmsPropertyType" Relationship="RegisterModel.FK_cmsTagRelationship_cmsPropertyType" FromRole="cmsTagRelationship" ToRole="cmsPropertyType" />
+    <NavigationProperty Name="cmsTag" Relationship="RegisterModel.FK_cmsTagRelationship_cmsTags_id" FromRole="cmsTagRelationship" ToRole="cmsTag" />
+  </EntityType>
+  <EntityType Name="cmsTag">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tag" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="group" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="cmsTagRelationships" Relationship="RegisterModel.FK_cmsTagRelationship_cmsTags_id" FromRole="cmsTag" ToRole="cmsTagRelationship" />
+    <NavigationProperty Name="cmsTags1" Relationship="RegisterModel.FK_cmsTags_cmsTags" FromRole="cmsTag" ToRole="cmsTag1" />
+    <NavigationProperty Name="cmsTag1" Relationship="RegisterModel.FK_cmsTags_cmsTags" FromRole="cmsTag1" ToRole="cmsTag" />
+  </EntityType>
+  <EntityType Name="cmsTask">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="closed" Type="Boolean" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="taskTypeId" Type="Int32" Nullable="false" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="parentUserId" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Comment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="cmsTaskType" Relationship="RegisterModel.FK_cmsTask_cmsTaskType_id" FromRole="cmsTask" ToRole="cmsTaskType" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_cmsTask_umbracoNode_id" FromRole="cmsTask" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoUser" Relationship="RegisterModel.FK_cmsTask_umbracoUser" FromRole="cmsTask" ToRole="umbracoUser" />
+    <NavigationProperty Name="umbracoUser1" Relationship="RegisterModel.FK_cmsTask_umbracoUser1" FromRole="cmsTask" ToRole="umbracoUser" />
+  </EntityType>
+  <EntityType Name="cmsTaskType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="alias" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="cmsTasks" Relationship="RegisterModel.FK_cmsTask_cmsTaskType_id" FromRole="cmsTaskType" ToRole="cmsTask" />
+  </EntityType>
+  <EntityType Name="cmsTemplate">
+    <Key>
+      <PropertyRef Name="pk" />
+    </Key>
+    <Property Name="pk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="alias" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="design" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_cmsTemplate_umbracoNode" FromRole="cmsTemplate" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="Signup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="umbracoAccess">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="loginNodeId" Type="Int32" Nullable="false" />
+    <Property Name="noAccessNodeId" Type="Int32" Nullable="false" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_umbracoAccess_umbracoNode_id" FromRole="umbracoAccess" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoNode1" Relationship="RegisterModel.FK_umbracoAccess_umbracoNode_id1" FromRole="umbracoAccess" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoNode2" Relationship="RegisterModel.FK_umbracoAccess_umbracoNode_id2" FromRole="umbracoAccess" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoAccessRules" Relationship="RegisterModel.FK_umbracoAccessRule_umbracoAccess_id" FromRole="umbracoAccess" ToRole="umbracoAccessRule" />
+  </EntityType>
+  <EntityType Name="umbracoAccessRule">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="accessId" Type="Guid" Nullable="false" />
+    <Property Name="ruleValue" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ruleType" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="umbracoAccess" Relationship="RegisterModel.FK_umbracoAccessRule_umbracoAccess_id" FromRole="umbracoAccessRule" ToRole="umbracoAccess" />
+  </EntityType>
+  <EntityType Name="umbracoCacheInstruction">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="utcStamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="jsonInstruction" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="originated" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="umbracoDomain">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="domainDefaultLanguage" Type="Int32" />
+    <Property Name="domainRootStructureID" Type="Int32" />
+    <Property Name="domainName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_umbracoDomains_umbracoNode_id" FromRole="umbracoDomain" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="umbracoExternalLogin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="loginProvider" Type="String" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="providerKey" Type="String" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="umbracoLanguage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="languageISOCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="languageCultureName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="cmsLanguageTexts" Relationship="RegisterModel.FK_cmsLanguageText_umbracoLanguage_id" FromRole="umbracoLanguage" ToRole="cmsLanguageText" />
+  </EntityType>
+  <EntityType Name="umbracoLock">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="value" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="umbracoLog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="NodeId" Type="Int32" Nullable="false" />
+    <Property Name="Datestamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="logHeader" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="logComment" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="umbracoMigration">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="version" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="umbracoNode">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="trashed" Type="Boolean" Nullable="false" />
+    <Property Name="parentID" Type="Int32" Nullable="false" />
+    <Property Name="nodeUser" Type="Int32" />
+    <Property Name="level" Type="Int32" Nullable="false" />
+    <Property Name="path" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="sortOrder" Type="Int32" Nullable="false" />
+    <Property Name="uniqueID" Type="Guid" Nullable="false" />
+    <Property Name="text" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="nodeObjectType" Type="Guid" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="cmsContents" Relationship="RegisterModel.FK_cmsContent_umbracoNode_id" FromRole="umbracoNode" ToRole="cmsContent" />
+    <NavigationProperty Name="cmsContentTypes" Relationship="RegisterModel.FK_cmsContentType_umbracoNode_id" FromRole="umbracoNode" ToRole="cmsContentType" />
+    <NavigationProperty Name="cmsDataTypes" Relationship="RegisterModel.FK_cmsDataType_umbracoNode_id" FromRole="umbracoNode" ToRole="cmsDataType" />
+    <NavigationProperty Name="cmsDocuments" Relationship="RegisterModel.FK_cmsDocument_umbracoNode_id" FromRole="umbracoNode" ToRole="cmsDocument" />
+    <NavigationProperty Name="cmsDocumentTypes" Relationship="RegisterModel.FK_cmsDocumentType_umbracoNode_id" FromRole="umbracoNode" ToRole="cmsDocumentType" />
+    <NavigationProperty Name="cmsMember" Relationship="RegisterModel.FK_cmsMember_umbracoNode_id" FromRole="umbracoNode" ToRole="cmsMember" />
+    <NavigationProperty Name="cmsMemberTypes" Relationship="RegisterModel.FK_cmsMemberType_umbracoNode_id" FromRole="umbracoNode" ToRole="cmsMemberType" />
+    <NavigationProperty Name="cmsPropertyDatas" Relationship="RegisterModel.FK_cmsPropertyData_umbracoNode_id" FromRole="umbracoNode" ToRole="cmsPropertyData" />
+    <NavigationProperty Name="cmsTasks" Relationship="RegisterModel.FK_cmsTask_umbracoNode_id" FromRole="umbracoNode" ToRole="cmsTask" />
+    <NavigationProperty Name="cmsTemplates" Relationship="RegisterModel.FK_cmsTemplate_umbracoNode" FromRole="umbracoNode" ToRole="cmsTemplate" />
+    <NavigationProperty Name="umbracoAccesses" Relationship="RegisterModel.FK_umbracoAccess_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoAccess" />
+    <NavigationProperty Name="umbracoAccesses1" Relationship="RegisterModel.FK_umbracoAccess_umbracoNode_id1" FromRole="umbracoNode" ToRole="umbracoAccess" />
+    <NavigationProperty Name="umbracoAccesses2" Relationship="RegisterModel.FK_umbracoAccess_umbracoNode_id2" FromRole="umbracoNode" ToRole="umbracoAccess" />
+    <NavigationProperty Name="umbracoDomains" Relationship="RegisterModel.FK_umbracoDomains_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoDomain" />
+    <NavigationProperty Name="umbracoUserGroups" Relationship="RegisterModel.FK_startContentId_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoUserGroup" />
+    <NavigationProperty Name="umbracoUserGroups1" Relationship="RegisterModel.FK_startMediaId_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoUserGroup" />
+    <NavigationProperty Name="umbracoNode1" Relationship="RegisterModel.FK_umbracoNode_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoNode1" />
+    <NavigationProperty Name="umbracoNode2" Relationship="RegisterModel.FK_umbracoNode_umbracoNode_id" FromRole="umbracoNode1" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoRelations" Relationship="RegisterModel.FK_umbracoRelation_umbracoNode" FromRole="umbracoNode" ToRole="umbracoRelation" />
+    <NavigationProperty Name="umbracoRelations1" Relationship="RegisterModel.FK_umbracoRelation_umbracoNode1" FromRole="umbracoNode" ToRole="umbracoRelation" />
+    <NavigationProperty Name="umbracoUser2NodeNotify" Relationship="RegisterModel.FK_umbracoUser2NodeNotify_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoUser2NodeNotify" />
+    <NavigationProperty Name="umbracoUserGroup2NodePermission" Relationship="RegisterModel.FK_umbracoUserGroup2NodePermission_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoUserGroup2NodePermission" />
+    <NavigationProperty Name="umbracoUserStartNodes" Relationship="RegisterModel.FK_umbracoUserStartNode_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoUserStartNode" />
+    <NavigationProperty Name="umbracoNode11" Relationship="RegisterModel.cmsContentType2ContentType" FromRole="umbracoNode" ToRole="umbracoNode1" />
+    <NavigationProperty Name="umbracoNodes" Relationship="RegisterModel.cmsContentType2ContentType" FromRole="umbracoNode1" ToRole="umbracoNode" />
+    <NavigationProperty Name="cmsMembers" Relationship="RegisterModel.cmsMember2MemberGroup" FromRole="umbracoNode" ToRole="cmsMember" />
+  </EntityType>
+  <EntityType Name="umbracoRedirectUrl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="contentKey" Type="Guid" Nullable="false" />
+    <Property Name="createDateUtc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="url" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="urlHash" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="umbracoRelation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="parentId" Type="Int32" Nullable="false" />
+    <Property Name="childId" Type="Int32" Nullable="false" />
+    <Property Name="relType" Type="Int32" Nullable="false" />
+    <Property Name="datetime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="comment" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_umbracoRelation_umbracoNode" FromRole="umbracoRelation" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoNode1" Relationship="RegisterModel.FK_umbracoRelation_umbracoNode1" FromRole="umbracoRelation" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoRelationType" Relationship="RegisterModel.FK_umbracoRelation_umbracoRelationType_id" FromRole="umbracoRelation" ToRole="umbracoRelationType" />
+  </EntityType>
+  <EntityType Name="umbracoRelationType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="typeUniqueId" Type="Guid" Nullable="false" />
+    <Property Name="dual" Type="Boolean" Nullable="false" />
+    <Property Name="parentObjectType" Type="Guid" Nullable="false" />
+    <Property Name="childObjectType" Type="Guid" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="alias" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoRelations" Relationship="RegisterModel.FK_umbracoRelation_umbracoRelationType_id" FromRole="umbracoRelationType" ToRole="umbracoRelation" />
+  </EntityType>
+  <EntityType Name="umbracoServer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="address" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="computerName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="registeredDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="lastNotifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="isActive" Type="Boolean" Nullable="false" />
+    <Property Name="isMaster" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="umbracoUser">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userDisabled" Type="Boolean" Nullable="false" />
+    <Property Name="userNoConsole" Type="Boolean" Nullable="false" />
+    <Property Name="userName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="userLogin" Type="String" Nullable="false" MaxLength="125" FixedLength="false" Unicode="true" />
+    <Property Name="userPassword" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="passwordConfig" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="userEmail" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="userLanguage" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="securityStampToken" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="failedLoginAttempts" Type="Int32" />
+    <Property Name="lastLockoutDate" Type="DateTime" Precision="3" />
+    <Property Name="lastPasswordChangeDate" Type="DateTime" Precision="3" />
+    <Property Name="lastLoginDate" Type="DateTime" Precision="3" />
+    <Property Name="emailConfirmedDate" Type="DateTime" Precision="3" />
+    <Property Name="invitedDate" Type="DateTime" Precision="3" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="avatar" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="cmsTasks" Relationship="RegisterModel.FK_cmsTask_umbracoUser" FromRole="umbracoUser" ToRole="cmsTask" />
+    <NavigationProperty Name="cmsTasks1" Relationship="RegisterModel.FK_cmsTask_umbracoUser1" FromRole="umbracoUser" ToRole="cmsTask" />
+    <NavigationProperty Name="umbracoUser2NodeNotify" Relationship="RegisterModel.FK_umbracoUser2NodeNotify_umbracoUser_id" FromRole="umbracoUser" ToRole="umbracoUser2NodeNotify" />
+    <NavigationProperty Name="umbracoUserStartNodes" Relationship="RegisterModel.FK_umbracoUserStartNode_umbracoUser_id" FromRole="umbracoUser" ToRole="umbracoUserStartNode" />
+    <NavigationProperty Name="umbracoUserGroups" Relationship="RegisterModel.umbracoUser2UserGroup" FromRole="umbracoUser" ToRole="umbracoUserGroup" />
+  </EntityType>
+  <EntityType Name="umbracoUser2NodeNotify">
+    <Key>
+      <PropertyRef Name="userId" />
+      <PropertyRef Name="nodeId" />
+      <PropertyRef Name="action" />
+    </Key>
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="action" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_umbracoUser2NodeNotify_umbracoNode_id" FromRole="umbracoUser2NodeNotify" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoUser" Relationship="RegisterModel.FK_umbracoUser2NodeNotify_umbracoUser_id" FromRole="umbracoUser2NodeNotify" ToRole="umbracoUser" />
+  </EntityType>
+  <EntityType Name="umbracoUserGroup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userGroupAlias" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="userGroupName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="userGroupDefaultPermissions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="icon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="startContentId" Type="Int32" />
+    <Property Name="startMediaId" Type="Int32" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_startContentId_umbracoNode_id" FromRole="umbracoUserGroup" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoNode1" Relationship="RegisterModel.FK_startMediaId_umbracoNode_id" FromRole="umbracoUserGroup" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoUserGroup2App" Relationship="RegisterModel.FK_umbracoUserGroup2App_umbracoUserGroup_id" FromRole="umbracoUserGroup" ToRole="umbracoUserGroup2App" />
+    <NavigationProperty Name="umbracoUserGroup2NodePermission" Relationship="RegisterModel.FK_umbracoUserGroup2NodePermission_umbracoUserGroup_id" FromRole="umbracoUserGroup" ToRole="umbracoUserGroup2NodePermission" />
+    <NavigationProperty Name="umbracoUsers" Relationship="RegisterModel.umbracoUser2UserGroup" FromRole="umbracoUserGroup" ToRole="umbracoUser" />
+  </EntityType>
+  <EntityType Name="umbracoUserGroup2App">
+    <Key>
+      <PropertyRef Name="userGroupId" />
+      <PropertyRef Name="app" />
+    </Key>
+    <Property Name="userGroupId" Type="Int32" Nullable="false" />
+    <Property Name="app" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoUserGroup" Relationship="RegisterModel.FK_umbracoUserGroup2App_umbracoUserGroup_id" FromRole="umbracoUserGroup2App" ToRole="umbracoUserGroup" />
+  </EntityType>
+  <EntityType Name="umbracoUserGroup2NodePermission">
+    <Key>
+      <PropertyRef Name="userGroupId" />
+      <PropertyRef Name="nodeId" />
+      <PropertyRef Name="permission" />
+    </Key>
+    <Property Name="userGroupId" Type="Int32" Nullable="false" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="permission" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_umbracoUserGroup2NodePermission_umbracoNode_id" FromRole="umbracoUserGroup2NodePermission" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoUserGroup" Relationship="RegisterModel.FK_umbracoUserGroup2NodePermission_umbracoUserGroup_id" FromRole="umbracoUserGroup2NodePermission" ToRole="umbracoUserGroup" />
+  </EntityType>
+  <EntityType Name="umbracoUserStartNode">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="startNode" Type="Int32" Nullable="false" />
+    <Property Name="startNodeType" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="umbracoNode" Relationship="RegisterModel.FK_umbracoUserStartNode_umbracoNode_id" FromRole="umbracoUserStartNode" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoUser" Relationship="RegisterModel.FK_umbracoUserStartNode_umbracoUser_id" FromRole="umbracoUserStartNode" ToRole="umbracoUser" />
+  </EntityType>
+  <Association Name="FK_cmsContent_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.cmsContent" Role="cmsContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsContent">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsContentType_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.cmsContentType" Role="cmsContentType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsContentType">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsDataType_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.cmsDataType" Role="cmsDataType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsDataType">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsDocument_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.cmsDocument" Role="cmsDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsDocument">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsDocumentType_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.cmsDocumentType" Role="cmsDocumentType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsDocumentType">
+        <PropertyRef Name="contentTypeNodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsLanguageText_umbracoLanguage_id">
+    <End Type="RegisterModel.umbracoLanguage" Role="umbracoLanguage" Multiplicity="1" />
+    <End Type="RegisterModel.cmsLanguageText" Role="cmsLanguageText" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoLanguage">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsLanguageText">
+        <PropertyRef Name="languageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsMacroProperty_cmsMacro_id">
+    <End Type="RegisterModel.cmsMacro" Role="cmsMacro" Multiplicity="1" />
+    <End Type="RegisterModel.cmsMacroProperty" Role="cmsMacroProperty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cmsMacro">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsMacroProperty">
+        <PropertyRef Name="macro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsMember_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.cmsMember" Role="cmsMember" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsMember">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsMemberType_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.cmsMemberType" Role="cmsMemberType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsMemberType">
+        <PropertyRef Name="NodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsPropertyData_cmsPropertyType_id">
+    <End Type="RegisterModel.cmsPropertyType" Role="cmsPropertyType" Multiplicity="1" />
+    <End Type="RegisterModel.cmsPropertyData" Role="cmsPropertyData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cmsPropertyType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsPropertyData">
+        <PropertyRef Name="propertytypeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsPropertyData_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.cmsPropertyData" Role="cmsPropertyData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsPropertyData">
+        <PropertyRef Name="contentNodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsPropertyType_cmsPropertyTypeGroup_id">
+    <End Type="RegisterModel.cmsPropertyTypeGroup" Role="cmsPropertyTypeGroup" Multiplicity="0..1" />
+    <End Type="RegisterModel.cmsPropertyType" Role="cmsPropertyType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cmsPropertyTypeGroup">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsPropertyType">
+        <PropertyRef Name="propertyTypeGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsTagRelationship_cmsPropertyType">
+    <End Type="RegisterModel.cmsPropertyType" Role="cmsPropertyType" Multiplicity="1" />
+    <End Type="RegisterModel.cmsTagRelationship" Role="cmsTagRelationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cmsPropertyType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsTagRelationship">
+        <PropertyRef Name="propertyTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsTagRelationship_cmsTags_id">
+    <End Type="RegisterModel.cmsTag" Role="cmsTag" Multiplicity="1" />
+    <End Type="RegisterModel.cmsTagRelationship" Role="cmsTagRelationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cmsTag">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsTagRelationship">
+        <PropertyRef Name="tagId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsTags_cmsTags">
+    <End Type="RegisterModel.cmsTag" Role="cmsTag" Multiplicity="0..1" />
+    <End Type="RegisterModel.cmsTag" Role="cmsTag1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cmsTag">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsTag1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsTask_cmsTaskType_id">
+    <End Type="RegisterModel.cmsTaskType" Role="cmsTaskType" Multiplicity="1" />
+    <End Type="RegisterModel.cmsTask" Role="cmsTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cmsTaskType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsTask">
+        <PropertyRef Name="taskTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsTask_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.cmsTask" Role="cmsTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsTask">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsTask_umbracoUser">
+    <End Type="RegisterModel.umbracoUser" Role="umbracoUser" Multiplicity="1" />
+    <End Type="RegisterModel.cmsTask" Role="cmsTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUser">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsTask">
+        <PropertyRef Name="parentUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsTask_umbracoUser1">
+    <End Type="RegisterModel.umbracoUser" Role="umbracoUser" Multiplicity="1" />
+    <End Type="RegisterModel.cmsTask" Role="cmsTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUser">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsTask">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsTemplate_umbracoNode">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.cmsTemplate" Role="cmsTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsTemplate">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoAccess_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoAccess" Role="umbracoAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoAccess">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoAccess_umbracoNode_id1">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoAccess" Role="umbracoAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoAccess">
+        <PropertyRef Name="loginNodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoAccess_umbracoNode_id2">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoAccess" Role="umbracoAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoAccess">
+        <PropertyRef Name="noAccessNodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoAccessRule_umbracoAccess_id">
+    <End Type="RegisterModel.umbracoAccess" Role="umbracoAccess" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoAccessRule" Role="umbracoAccessRule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoAccess">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoAccessRule">
+        <PropertyRef Name="accessId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoDomains_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="0..1" />
+    <End Type="RegisterModel.umbracoDomain" Role="umbracoDomain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoDomain">
+        <PropertyRef Name="domainRootStructureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_startContentId_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="0..1" />
+    <End Type="RegisterModel.umbracoUserGroup" Role="umbracoUserGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserGroup">
+        <PropertyRef Name="startContentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_startMediaId_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="0..1" />
+    <End Type="RegisterModel.umbracoUserGroup" Role="umbracoUserGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserGroup">
+        <PropertyRef Name="startMediaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoNode_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoNode1">
+        <PropertyRef Name="parentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoRelation_umbracoNode">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoRelation" Role="umbracoRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoRelation">
+        <PropertyRef Name="parentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoRelation_umbracoNode1">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoRelation" Role="umbracoRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoRelation">
+        <PropertyRef Name="childId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUser2NodeNotify_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoUser2NodeNotify" Role="umbracoUser2NodeNotify" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUser2NodeNotify">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUserGroup2NodePermission_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoUserGroup2NodePermission" Role="umbracoUserGroup2NodePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserGroup2NodePermission">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUserStartNode_umbracoNode_id">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoUserStartNode" Role="umbracoUserStartNode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserStartNode">
+        <PropertyRef Name="startNode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoRelation_umbracoRelationType_id">
+    <End Type="RegisterModel.umbracoRelationType" Role="umbracoRelationType" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoRelation" Role="umbracoRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoRelationType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoRelation">
+        <PropertyRef Name="relType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUser2NodeNotify_umbracoUser_id">
+    <End Type="RegisterModel.umbracoUser" Role="umbracoUser" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoUser2NodeNotify" Role="umbracoUser2NodeNotify" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUser">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUser2NodeNotify">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUserStartNode_umbracoUser_id">
+    <End Type="RegisterModel.umbracoUser" Role="umbracoUser" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoUserStartNode" Role="umbracoUserStartNode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUser">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserStartNode">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUserGroup2App_umbracoUserGroup_id">
+    <End Type="RegisterModel.umbracoUserGroup" Role="umbracoUserGroup" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoUserGroup2App" Role="umbracoUserGroup2App" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUserGroup">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserGroup2App">
+        <PropertyRef Name="userGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUserGroup2NodePermission_umbracoUserGroup_id">
+    <End Type="RegisterModel.umbracoUserGroup" Role="umbracoUserGroup" Multiplicity="1" />
+    <End Type="RegisterModel.umbracoUserGroup2NodePermission" Role="umbracoUserGroup2NodePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUserGroup">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserGroup2NodePermission">
+        <PropertyRef Name="userGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cmsContentType2ContentType">
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="*" />
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode1" Multiplicity="*" />
+  </Association>
+  <Association Name="cmsMember2MemberGroup">
+    <End Type="RegisterModel.cmsMember" Role="cmsMember" Multiplicity="*" />
+    <End Type="RegisterModel.umbracoNode" Role="umbracoNode" Multiplicity="*" />
+  </Association>
+  <Association Name="umbracoUser2UserGroup">
+    <End Type="RegisterModel.umbracoUser" Role="umbracoUser" Multiplicity="*" />
+    <End Type="RegisterModel.umbracoUserGroup" Role="umbracoUserGroup" Multiplicity="*" />
+  </Association>
+</Schema>

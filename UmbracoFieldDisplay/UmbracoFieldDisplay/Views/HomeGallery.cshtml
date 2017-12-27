@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedContentModels;  
+@{
+	Layout = null;
+}
+
+@* the fun starts here *@
+
+@foreach(IPublishedContent image in @Model.GetPropertyValue<IEnumerable></IEnumerable><IPublishedContent>>
+        ("images").ToList())
+    {
+        <img src='@image.Url' height="150" width="150">
+    }

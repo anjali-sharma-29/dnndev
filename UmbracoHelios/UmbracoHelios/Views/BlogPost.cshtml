@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.BlogPost>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+}
+
+            @Model.Content.CreateDate.ToShortDateString()
+            @Html.Partial("~/Views/Partials/CategoryLinks.cshtml", Model.Content.Categories)
+            <h3>@Model.Content.Excerpt</h3>
+        @Model.Content.GetPropertyValue("blogContent")

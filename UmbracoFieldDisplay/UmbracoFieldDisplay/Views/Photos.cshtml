@@ -1,0 +1,31 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Photos>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+}
+<html>
+    <head>
+        <style>
+          img 
+          {
+            border: 1px solid #000;
+            border-radius: 4px;
+            padding: 5px;
+            width: 200px;
+          }
+          img :hover
+          {
+            width:250;   
+          }
+        </style>
+    </head>
+<body bgcolor="grey">
+    <h1>Images of different events</h1>
+    
+@foreach(IPublishedContent image in @Model.GetPropertyValue<IEnumerable<IPublishedContent>>
+        ("image").ToList())
+    {
+     <img src='@image.Url' height="200" width="200">
+    }
+</body>
+</html>

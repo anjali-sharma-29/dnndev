@@ -1,0 +1,58 @@
+﻿
+@using WordCountSearcher.Models;
+@using System.Collections.Generic;
+@{
+    ViewBag.Title = "WordCountSearch";
+}
+@model WordCountSearcher.Models.SearchWordModel
+@using (Html.BeginForm("Index", "WordCount"))
+{
+    <br /><br>
+    @Html.Label("searchWordLabel", "Words to be search....", htmlAttributes: new { @class = "control-label col-md-2" })<br />
+    @Html.TextBox("searchWords");
+    <input type="submit" name="buttonName" value="Add" onclick="" class="btn btn-default" /><br />
+    if (TempData["WordAddSuccessMessage"] != null)
+    {
+        <tr><td><b>  Word List</b></td></tr><br>
+        foreach (var searchWords in Session)
+        {
+        <tr><td>
+               @searchWords
+        </td></tr>
+        }
+    }
+    <font color="blue"><br>@TempData["WordAddSuccessMessage"]</font><br />
+    <div form-group>
+        <br />
+        @Html.Label("para", "Enter Paragraph here....", htmlAttributes: new { @class = "control-label col-md-2" }) <br />
+
+        @Html.TextArea("paragraph", "", 10, 50, null)
+        <br /><font color="red">@ViewBag.paragraphCheck</font>
+
+    </div>
+    <div form-group>
+        <br />
+        <input type="submit" name="buttonName" value="Get Searched Word count" class="btn btn-default" />
+        <br />
+    </div>
+
+}
+
+@if (ViewBag.searchList != null)
+{
+
+    foreach (var key in ((List<SearchWordModel>)ViewBag.searchList))
+    {
+        <tr>
+            <td>
+                @key.Word
+            </td>
+            <td>
+                @key.Count
+            </td>
+
+        </tr><br />
+    }
+
+}
+<font color="blue">@ViewBag.SearchMessage</font>

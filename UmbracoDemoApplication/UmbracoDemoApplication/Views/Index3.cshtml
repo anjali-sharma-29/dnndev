@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Index3>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+}
+<html>
+<body>
+    <h3>@Model.Content.GetPropertyValue("text1")</h3>
+</body>
+</html>

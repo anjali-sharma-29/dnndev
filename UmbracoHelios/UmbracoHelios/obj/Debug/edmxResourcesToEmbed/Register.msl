@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RegisterModelStoreContainer" CdmEntityContainer="RegisterEntities">
+    <EntitySetMapping Name="RegisterUsers">
+      <EntityTypeMapping TypeName="RegisterModel.RegisterUser">
+        <MappingFragment StoreEntitySet="RegisterUser">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsContents">
+      <EntityTypeMapping TypeName="RegisterModel.cmsContent">
+        <MappingFragment StoreEntitySet="cmsContent">
+          <ScalarProperty Name="contentType" ColumnName="contentType" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="pk" ColumnName="pk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsContentTypes">
+      <EntityTypeMapping TypeName="RegisterModel.cmsContentType">
+        <MappingFragment StoreEntitySet="cmsContentType">
+          <ScalarProperty Name="allowAtRoot" ColumnName="allowAtRoot" />
+          <ScalarProperty Name="isContainer" ColumnName="isContainer" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="thumbnail" ColumnName="thumbnail" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="pk" ColumnName="pk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsContentTypeAllowedContentTypes">
+      <EntityTypeMapping TypeName="RegisterModel.cmsContentTypeAllowedContentType">
+        <MappingFragment StoreEntitySet="cmsContentTypeAllowedContentType">
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="AllowedId" ColumnName="AllowedId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsContentVersions">
+      <EntityTypeMapping TypeName="RegisterModel.cmsContentVersion">
+        <MappingFragment StoreEntitySet="cmsContentVersion">
+          <ScalarProperty Name="VersionDate" ColumnName="VersionDate" />
+          <ScalarProperty Name="VersionId" ColumnName="VersionId" />
+          <ScalarProperty Name="ContentId" ColumnName="ContentId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsContentXmls">
+      <EntityTypeMapping TypeName="RegisterModel.cmsContentXml">
+        <MappingFragment StoreEntitySet="cmsContentXml">
+          <ScalarProperty Name="xml" ColumnName="xml" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsDataTypes">
+      <EntityTypeMapping TypeName="RegisterModel.cmsDataType">
+        <MappingFragment StoreEntitySet="cmsDataType">
+          <ScalarProperty Name="dbType" ColumnName="dbType" />
+          <ScalarProperty Name="propertyEditorAlias" ColumnName="propertyEditorAlias" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="pk" ColumnName="pk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsDataTypePreValues">
+      <EntityTypeMapping TypeName="RegisterModel.cmsDataTypePreValue">
+        <MappingFragment StoreEntitySet="cmsDataTypePreValues">
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="sortorder" ColumnName="sortorder" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="datatypeNodeId" ColumnName="datatypeNodeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsDictionaries">
+      <EntityTypeMapping TypeName="RegisterModel.cmsDictionary">
+        <MappingFragment StoreEntitySet="cmsDictionary">
+          <ScalarProperty Name="key" ColumnName="key" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pk" ColumnName="pk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsDocuments">
+      <EntityTypeMapping TypeName="RegisterModel.cmsDocument">
+        <MappingFragment StoreEntitySet="cmsDocument">
+          <ScalarProperty Name="newest" ColumnName="newest" />
+          <ScalarProperty Name="templateId" ColumnName="templateId" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="expireDate" ColumnName="expireDate" />
+          <ScalarProperty Name="releaseDate" ColumnName="releaseDate" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="versionId" ColumnName="versionId" />
+          <ScalarProperty Name="documentUser" ColumnName="documentUser" />
+          <ScalarProperty Name="published" ColumnName="published" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsDocumentTypes">
+      <EntityTypeMapping TypeName="RegisterModel.cmsDocumentType">
+        <MappingFragment StoreEntitySet="cmsDocumentType">
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="templateNodeId" ColumnName="templateNodeId" />
+          <ScalarProperty Name="contentTypeNodeId" ColumnName="contentTypeNodeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsLanguageTexts">
+      <EntityTypeMapping TypeName="RegisterModel.cmsLanguageText">
+        <MappingFragment StoreEntitySet="cmsLanguageText">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+          <ScalarProperty Name="languageId" ColumnName="languageId" />
+          <ScalarProperty Name="pk" ColumnName="pk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsMacroes">
+      <EntityTypeMapping TypeName="RegisterModel.cmsMacro">
+        <MappingFragment StoreEntitySet="cmsMacro">
+          <ScalarProperty Name="macroPython" ColumnName="macroPython" />
+          <ScalarProperty Name="macroDontRender" ColumnName="macroDontRender" />
+          <ScalarProperty Name="macroCachePersonalized" ColumnName="macroCachePersonalized" />
+          <ScalarProperty Name="macroCacheByPage" ColumnName="macroCacheByPage" />
+          <ScalarProperty Name="macroXSLT" ColumnName="macroXSLT" />
+          <ScalarProperty Name="macroScriptAssembly" ColumnName="macroScriptAssembly" />
+          <ScalarProperty Name="macroScriptType" ColumnName="macroScriptType" />
+          <ScalarProperty Name="macroName" ColumnName="macroName" />
+          <ScalarProperty Name="macroAlias" ColumnName="macroAlias" />
+          <ScalarProperty Name="macroRefreshRate" ColumnName="macroRefreshRate" />
+          <ScalarProperty Name="macroUseInEditor" ColumnName="macroUseInEditor" />
+          <ScalarProperty Name="uniqueId" ColumnName="uniqueId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsMacroProperties">
+      <EntityTypeMapping TypeName="RegisterModel.cmsMacroProperty">
+        <MappingFragment StoreEntitySet="cmsMacroProperty">
+          <ScalarProperty Name="macroPropertyName" ColumnName="macroPropertyName" />
+          <ScalarProperty Name="macroPropertyAlias" ColumnName="macroPropertyAlias" />
+          <ScalarProperty Name="macroPropertySortOrder" ColumnName="macroPropertySortOrder" />
+          <ScalarProperty Name="macro" ColumnName="macro" />
+          <ScalarProperty Name="editorAlias" ColumnName="editorAlias" />
+          <ScalarProperty Name="uniquePropertyId" ColumnName="uniquePropertyId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsMembers">
+      <EntityTypeMapping TypeName="RegisterModel.cmsMember">
+        <MappingFragment StoreEntitySet="cmsMember">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsMemberTypes">
+      <EntityTypeMapping TypeName="RegisterModel.cmsMemberType">
+        <MappingFragment StoreEntitySet="cmsMemberType">
+          <ScalarProperty Name="viewOnProfile" ColumnName="viewOnProfile" />
+          <ScalarProperty Name="memberCanEdit" ColumnName="memberCanEdit" />
+          <ScalarProperty Name="propertytypeId" ColumnName="propertytypeId" />
+          <ScalarProperty Name="NodeId" ColumnName="NodeId" />
+          <ScalarProperty Name="pk" ColumnName="pk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsPreviewXmls">
+      <EntityTypeMapping TypeName="RegisterModel.cmsPreviewXml">
+        <MappingFragment StoreEntitySet="cmsPreviewXml">
+          <ScalarProperty Name="xml" ColumnName="xml" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="versionId" ColumnName="versionId" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsPropertyDatas">
+      <EntityTypeMapping TypeName="RegisterModel.cmsPropertyData">
+        <MappingFragment StoreEntitySet="cmsPropertyData">
+          <ScalarProperty Name="dataNtext" ColumnName="dataNtext" />
+          <ScalarProperty Name="dataNvarchar" ColumnName="dataNvarchar" />
+          <ScalarProperty Name="dataDate" ColumnName="dataDate" />
+          <ScalarProperty Name="dataDecimal" ColumnName="dataDecimal" />
+          <ScalarProperty Name="dataInt" ColumnName="dataInt" />
+          <ScalarProperty Name="propertytypeid" ColumnName="propertytypeid" />
+          <ScalarProperty Name="versionId" ColumnName="versionId" />
+          <ScalarProperty Name="contentNodeId" ColumnName="contentNodeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsPropertyTypes">
+      <EntityTypeMapping TypeName="RegisterModel.cmsPropertyType">
+        <MappingFragment StoreEntitySet="cmsPropertyType">
+          <ScalarProperty Name="UniqueID" ColumnName="UniqueID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="validationRegExp" ColumnName="validationRegExp" />
+          <ScalarProperty Name="mandatory" ColumnName="mandatory" />
+          <ScalarProperty Name="sortOrder" ColumnName="sortOrder" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="propertyTypeGroupId" ColumnName="propertyTypeGroupId" />
+          <ScalarProperty Name="contentTypeId" ColumnName="contentTypeId" />
+          <ScalarProperty Name="dataTypeId" ColumnName="dataTypeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsPropertyTypeGroups">
+      <EntityTypeMapping TypeName="RegisterModel.cmsPropertyTypeGroup">
+        <MappingFragment StoreEntitySet="cmsPropertyTypeGroup">
+          <ScalarProperty Name="uniqueID" ColumnName="uniqueID" />
+          <ScalarProperty Name="sortorder" ColumnName="sortorder" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="contenttypeNodeId" ColumnName="contenttypeNodeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsTagRelationships">
+      <EntityTypeMapping TypeName="RegisterModel.cmsTagRelationship">
+        <MappingFragment StoreEntitySet="cmsTagRelationship">
+          <ScalarProperty Name="propertyTypeId" ColumnName="propertyTypeId" />
+          <ScalarProperty Name="tagId" ColumnName="tagId" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsTags">
+      <EntityTypeMapping TypeName="RegisterModel.cmsTag">
+        <MappingFragment StoreEntitySet="cmsTags">
+          <ScalarProperty Name="group" ColumnName="group" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsTasks">
+      <EntityTypeMapping TypeName="RegisterModel.cmsTask">
+        <MappingFragment StoreEntitySet="cmsTask">
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="parentUserId" ColumnName="parentUserId" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="taskTypeId" ColumnName="taskTypeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="closed" ColumnName="closed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsTaskTypes">
+      <EntityTypeMapping TypeName="RegisterModel.cmsTaskType">
+        <MappingFragment StoreEntitySet="cmsTaskType">
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsTemplates">
+      <EntityTypeMapping TypeName="RegisterModel.cmsTemplate">
+        <MappingFragment StoreEntitySet="cmsTemplate">
+          <ScalarProperty Name="design" ColumnName="design" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="pk" ColumnName="pk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Signups">
+      <EntityTypeMapping TypeName="RegisterModel.Signup">
+        <MappingFragment StoreEntitySet="Signup">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoAccesses">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoAccess">
+        <MappingFragment StoreEntitySet="umbracoAccess">
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="noAccessNodeId" ColumnName="noAccessNodeId" />
+          <ScalarProperty Name="loginNodeId" ColumnName="loginNodeId" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoAccessRules">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoAccessRule">
+        <MappingFragment StoreEntitySet="umbracoAccessRule">
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="ruleType" ColumnName="ruleType" />
+          <ScalarProperty Name="ruleValue" ColumnName="ruleValue" />
+          <ScalarProperty Name="accessId" ColumnName="accessId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoCacheInstructions">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoCacheInstruction">
+        <MappingFragment StoreEntitySet="umbracoCacheInstruction">
+          <ScalarProperty Name="originated" ColumnName="originated" />
+          <ScalarProperty Name="jsonInstruction" ColumnName="jsonInstruction" />
+          <ScalarProperty Name="utcStamp" ColumnName="utcStamp" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoDomains">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoDomain">
+        <MappingFragment StoreEntitySet="umbracoDomains">
+          <ScalarProperty Name="domainName" ColumnName="domainName" />
+          <ScalarProperty Name="domainRootStructureID" ColumnName="domainRootStructureID" />
+          <ScalarProperty Name="domainDefaultLanguage" ColumnName="domainDefaultLanguage" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoExternalLogins">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoExternalLogin">
+        <MappingFragment StoreEntitySet="umbracoExternalLogin">
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="providerKey" ColumnName="providerKey" />
+          <ScalarProperty Name="loginProvider" ColumnName="loginProvider" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoLanguages">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoLanguage">
+        <MappingFragment StoreEntitySet="umbracoLanguage">
+          <ScalarProperty Name="languageCultureName" ColumnName="languageCultureName" />
+          <ScalarProperty Name="languageISOCode" ColumnName="languageISOCode" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoLocks">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoLock">
+        <MappingFragment StoreEntitySet="umbracoLock">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoLogs">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoLog">
+        <MappingFragment StoreEntitySet="umbracoLog">
+          <ScalarProperty Name="logComment" ColumnName="logComment" />
+          <ScalarProperty Name="logHeader" ColumnName="logHeader" />
+          <ScalarProperty Name="Datestamp" ColumnName="Datestamp" />
+          <ScalarProperty Name="NodeId" ColumnName="NodeId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoMigrations">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoMigration">
+        <MappingFragment StoreEntitySet="umbracoMigration">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoNodes">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoNode">
+        <MappingFragment StoreEntitySet="umbracoNode">
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="nodeObjectType" ColumnName="nodeObjectType" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="uniqueID" ColumnName="uniqueID" />
+          <ScalarProperty Name="sortOrder" ColumnName="sortOrder" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="nodeUser" ColumnName="nodeUser" />
+          <ScalarProperty Name="parentID" ColumnName="parentID" />
+          <ScalarProperty Name="trashed" ColumnName="trashed" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoRedirectUrls">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoRedirectUrl">
+        <MappingFragment StoreEntitySet="umbracoRedirectUrl">
+          <ScalarProperty Name="urlHash" ColumnName="urlHash" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="createDateUtc" ColumnName="createDateUtc" />
+          <ScalarProperty Name="contentKey" ColumnName="contentKey" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoRelations">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoRelation">
+        <MappingFragment StoreEntitySet="umbracoRelation">
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="datetime" ColumnName="datetime" />
+          <ScalarProperty Name="relType" ColumnName="relType" />
+          <ScalarProperty Name="childId" ColumnName="childId" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoRelationTypes">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoRelationType">
+        <MappingFragment StoreEntitySet="umbracoRelationType">
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="childObjectType" ColumnName="childObjectType" />
+          <ScalarProperty Name="parentObjectType" ColumnName="parentObjectType" />
+          <ScalarProperty Name="dual" ColumnName="dual" />
+          <ScalarProperty Name="typeUniqueId" ColumnName="typeUniqueId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoServers">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoServer">
+        <MappingFragment StoreEntitySet="umbracoServer">
+          <ScalarProperty Name="isMaster" ColumnName="isMaster" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="lastNotifiedDate" ColumnName="lastNotifiedDate" />
+          <ScalarProperty Name="registeredDate" ColumnName="registeredDate" />
+          <ScalarProperty Name="computerName" ColumnName="computerName" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoUsers">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoUser">
+        <MappingFragment StoreEntitySet="umbracoUser">
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="invitedDate" ColumnName="invitedDate" />
+          <ScalarProperty Name="emailConfirmedDate" ColumnName="emailConfirmedDate" />
+          <ScalarProperty Name="lastLoginDate" ColumnName="lastLoginDate" />
+          <ScalarProperty Name="lastPasswordChangeDate" ColumnName="lastPasswordChangeDate" />
+          <ScalarProperty Name="lastLockoutDate" ColumnName="lastLockoutDate" />
+          <ScalarProperty Name="failedLoginAttempts" ColumnName="failedLoginAttempts" />
+          <ScalarProperty Name="securityStampToken" ColumnName="securityStampToken" />
+          <ScalarProperty Name="userLanguage" ColumnName="userLanguage" />
+          <ScalarProperty Name="userEmail" ColumnName="userEmail" />
+          <ScalarProperty Name="passwordConfig" ColumnName="passwordConfig" />
+          <ScalarProperty Name="userPassword" ColumnName="userPassword" />
+          <ScalarProperty Name="userLogin" ColumnName="userLogin" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="userNoConsole" ColumnName="userNoConsole" />
+          <ScalarProperty Name="userDisabled" ColumnName="userDisabled" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoUser2NodeNotify">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoUser2NodeNotify">
+        <MappingFragment StoreEntitySet="umbracoUser2NodeNotify">
+          <ScalarProperty Name="action" ColumnName="action" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoUserGroups">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoUserGroup">
+        <MappingFragment StoreEntitySet="umbracoUserGroup">
+          <ScalarProperty Name="startMediaId" ColumnName="startMediaId" />
+          <ScalarProperty Name="startContentId" ColumnName="startContentId" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="userGroupDefaultPermissions" ColumnName="userGroupDefaultPermissions" />
+          <ScalarProperty Name="userGroupName" ColumnName="userGroupName" />
+          <ScalarProperty Name="userGroupAlias" ColumnName="userGroupAlias" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoUserGroup2App">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoUserGroup2App">
+        <MappingFragment StoreEntitySet="umbracoUserGroup2App">
+          <ScalarProperty Name="app" ColumnName="app" />
+          <ScalarProperty Name="userGroupId" ColumnName="userGroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoUserGroup2NodePermission">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoUserGroup2NodePermission">
+        <MappingFragment StoreEntitySet="umbracoUserGroup2NodePermission">
+          <ScalarProperty Name="permission" ColumnName="permission" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="userGroupId" ColumnName="userGroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoUserStartNodes">
+      <EntityTypeMapping TypeName="RegisterModel.umbracoUserStartNode">
+        <MappingFragment StoreEntitySet="umbracoUserStartNode">
+          <ScalarProperty Name="startNodeType" ColumnName="startNodeType" />
+          <ScalarProperty Name="startNode" ColumnName="startNode" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="cmsContentType2ContentType" TypeName="RegisterModel.cmsContentType2ContentType" StoreEntitySet="cmsContentType2ContentType">
+      <EndProperty Name="umbracoNode1">
+        <ScalarProperty Name="id" ColumnName="parentContentTypeId" />
+      </EndProperty>
+      <EndProperty Name="umbracoNode">
+        <ScalarProperty Name="id" ColumnName="childContentTypeId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="cmsMember2MemberGroup" TypeName="RegisterModel.cmsMember2MemberGroup" StoreEntitySet="cmsMember2MemberGroup">
+      <EndProperty Name="umbracoNode">
+        <ScalarProperty Name="id" ColumnName="MemberGroup" />
+      </EndProperty>
+      <EndProperty Name="cmsMember">
+        <ScalarProperty Name="nodeId" ColumnName="Member" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="umbracoUser2UserGroup" TypeName="RegisterModel.umbracoUser2UserGroup" StoreEntitySet="umbracoUser2UserGroup">
+      <EndProperty Name="umbracoUserGroup">
+        <ScalarProperty Name="id" ColumnName="userGroupId" />
+      </EndProperty>
+      <EndProperty Name="umbracoUser">
+        <ScalarProperty Name="id" ColumnName="userId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

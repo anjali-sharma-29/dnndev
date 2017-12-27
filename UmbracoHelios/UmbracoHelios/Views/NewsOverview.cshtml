@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.NewsOverview>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+	var newsList=@CurrentPage.Children();
+}
+
+@foreach(var news in newsList)
+{
+    <h3><font color="blue">@CurrentPage.newsBodyText</font></h3>
+}

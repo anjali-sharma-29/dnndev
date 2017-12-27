@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+}
+var homeNodes = @CurrentPage.Children;
+
+foreach (var homeNode in homeNodes)
+{
+    @homeNode.GetPropertyValue("pageTitle")<br />
+}

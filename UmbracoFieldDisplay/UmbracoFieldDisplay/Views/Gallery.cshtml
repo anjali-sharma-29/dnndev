@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Index>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+}
+
+@* the fun starts here *@
+<body>
+    @foreach(var url in @Model.GetPropertyValue("images").Split(','))
+    {
+        <img src="@url" width="60">
+    }
+</body>

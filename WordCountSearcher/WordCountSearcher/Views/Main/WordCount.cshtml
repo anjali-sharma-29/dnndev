@@ -1,0 +1,44 @@
+﻿
+@using WordCountSearcher.Models;
+SearchWordModel;
+@using System.Collections.Generic;
+@{
+    ViewBag.Title = "WordCountSearch";
+}
+
+
+@using (Html.BeginForm("WordCount", "WordCount"))
+{
+    <br />
+    <br />
+    <div form-group>
+        <br />
+        @Html.Label("para", "Enter Paragraph here....", htmlAttributes: new { @class = "control-label col-md-2" })<br />
+
+        @Html.TextArea("paragraph", "", 10, 50, null)
+        <br />
+    </div>
+    <div form-group>
+        <br />
+        <input type="submit" value="Get Searched Word count" class="btn btn-default" />
+    </div>
+    <br />
+}
+
+@if (ViewBag.List != null)
+{
+
+    foreach (var key in ((List<SearchWordModel>)ViewBag.List).ToList())
+    {
+        <tr>
+            <td>
+                @key.word
+            </td>
+            <td>
+                @key.count
+            </td>
+
+        </tr><br />
+    }
+
+}

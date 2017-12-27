@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Contactus>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+<div>
+    <h2>@Umbraco.Field("pageTitle")</h2>
+    <br><br>
+    <h3>@Umbraco.Field("bodyText")</h3>
+</div>

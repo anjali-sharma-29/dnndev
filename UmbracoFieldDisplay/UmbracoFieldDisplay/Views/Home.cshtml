@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+}
+<Html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <script src="/scripts/jquery.min.js"></script>
+        <script src="/scripts/bootstrap.min.js"></script>
+    </head>
+    
+    <body background="@Model.GetPropertyValue("background")">
+    <h2>Media Picker with multiple images</h2>
+     @foreach(IPublishedContent image in @Model.GetPropertyValue<IEnumerable<IPublishedContent>>
+        ("images").ToList())
+    {
+        <img src='@image.Url' height="150" width="150">
+    }
+    <header style="background-color:orange;"><h1>@Model.GetPropertyValue("headerText")</h1></header>
+    <h3> <font color="White"> @Model.GetGridHtml("bodyText")</font></h3>
+    <h2>@*@Html.ActionLink("Photo gallery","HomeGallery","Home")*@ <a href=@Umbraco.NiceUrl(1338)>Image Gallery</a></h2>
+    <h3 style=""><font color="Orange">@Model.GetPropertyValue("footerText")</font></h3>
+    </Body>
+</html>

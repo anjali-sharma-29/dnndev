@@ -1,0 +1,26 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : 12 December 2017 04:00:06 PM
+   Source : C:\Users\Kiprosh\Documents\Visual Studio 2017\Projects\UmbracoWebApp\UmbracoWebApp\Umbraco\
+     Dest : C:\Users\Kiprosh\Documents\Visual Studio 2017\Projects\UmbracoWebApp\UmbracoWebApp\App_Data\NuGetBackup\20171212-160005\Umbraco\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                   0	C:\Users\Kiprosh\Documents\Visual Studio 2017\Projects\UmbracoWebApp\UmbracoWebApp\Umbraco\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         0         0         0         0
+   Files :         0         0         0         0         0         0
+   Bytes :         0         0         0         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : 12 December 2017 04:00:06 PM
+

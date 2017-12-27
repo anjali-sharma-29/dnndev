@@ -1,0 +1,7 @@
+C:\Users\Kiprosh\documents\visual studio 2017\Projects\WordOccurenceCounter\WordOccurenceCounter\obj\Debug\WordOccurenceCounter.csprojResolveAssemblyReference.cache
+C:\Users\Kiprosh\documents\visual studio 2017\Projects\WordOccurenceCounter\WordOccurenceCounter\obj\Debug\WordOccurenceCounter.csproj.CoreCompileInputs.cache
+C:\Users\Kiprosh\documents\visual studio 2017\Projects\WordOccurenceCounter\WordOccurenceCounter\bin\Debug\WordOccurenceCounter.exe.config
+C:\Users\Kiprosh\documents\visual studio 2017\Projects\WordOccurenceCounter\WordOccurenceCounter\bin\Debug\WordOccurenceCounter.exe
+C:\Users\Kiprosh\documents\visual studio 2017\Projects\WordOccurenceCounter\WordOccurenceCounter\bin\Debug\WordOccurenceCounter.pdb
+C:\Users\Kiprosh\documents\visual studio 2017\Projects\WordOccurenceCounter\WordOccurenceCounter\obj\Debug\WordOccurenceCounter.exe
+C:\Users\Kiprosh\documents\visual studio 2017\Projects\WordOccurenceCounter\WordOccurenceCounter\obj\Debug\WordOccurenceCounter.pdb

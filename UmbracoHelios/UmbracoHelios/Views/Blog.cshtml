@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Blog>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+}
+
+ @Umbraco.RenderMacro("latestBlogposts",
+                     new
+                     {
+                         numberOfPosts = @Model.howManyPostShouldBeShown,
+                         startNodeId = Model.Content.Id
+                     })
+       

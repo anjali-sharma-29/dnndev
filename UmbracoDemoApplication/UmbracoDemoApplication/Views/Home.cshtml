@@ -1,0 +1,9 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+<div style="height:70%;">
+   <h2> @Umbraco.Field("pageTitle")</h2>
+   <h4>@Umbraco.Field("bodyText")</h4>
+</div>

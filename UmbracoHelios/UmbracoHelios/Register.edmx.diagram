@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0cfb78d6db8c4fe4b6b3c713eb7b8f45" Name="Diagram1">
+        <EntityTypeShape EntityType="RegisterModel.RegisterUser" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterModel.cmsContent" Width="1.5" PointX="8.25" PointY="55" />
+        <EntityTypeShape EntityType="RegisterModel.cmsContentType" Width="1.5" PointX="8.25" PointY="47.75" />
+        <EntityTypeShape EntityType="RegisterModel.cmsContentTypeAllowedContentType" Width="1.5" PointX="5.75" PointY="5.75" />
+        <EntityTypeShape EntityType="RegisterModel.cmsContentVersion" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="RegisterModel.cmsContentXml" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="RegisterModel.cmsDataType" Width="1.5" PointX="8.25" PointY="42.375" />
+        <EntityTypeShape EntityType="RegisterModel.cmsDataTypePreValue" Width="1.5" PointX="7.75" PointY="5.75" />
+        <EntityTypeShape EntityType="RegisterModel.cmsDictionary" Width="1.5" PointX="4.75" PointY="8.75" />
+        <EntityTypeShape EntityType="RegisterModel.cmsDocument" Width="1.5" PointX="8.25" PointY="32" />
+        <EntityTypeShape EntityType="RegisterModel.cmsDocumentType" Width="1.5" PointX="8.25" PointY="39.875" />
+        <EntityTypeShape EntityType="RegisterModel.cmsLanguageText" Width="1.5" PointX="3" PointY="4.875" />
+        <EntityTypeShape EntityType="RegisterModel.cmsMacro" Width="1.5" PointX="5.75" PointY="1" />
+        <EntityTypeShape EntityType="RegisterModel.cmsMacroProperty" Width="1.5" PointX="8" PointY="1.625" />
+        <EntityTypeShape EntityType="RegisterModel.cmsMember" Width="1.5" PointX="3.75" PointY="26.5" />
+        <EntityTypeShape EntityType="RegisterModel.cmsMemberType" Width="1.5" PointX="8.25" PointY="57.5" />
+        <EntityTypeShape EntityType="RegisterModel.cmsPreviewXml" Width="1.5" PointX="6.75" PointY="8.75" />
+        <EntityTypeShape EntityType="RegisterModel.cmsPropertyData" Width="1.5" PointX="14.25" PointY="26" />
+        <EntityTypeShape EntityType="RegisterModel.cmsPropertyType" Width="1.5" PointX="12" PointY="14.75" />
+        <EntityTypeShape EntityType="RegisterModel.cmsPropertyTypeGroup" Width="1.5" PointX="9.75" PointY="15.5" />
+        <EntityTypeShape EntityType="RegisterModel.cmsTagRelationship" Width="1.5" PointX="14.25" PointY="8.75" />
+        <EntityTypeShape EntityType="RegisterModel.cmsTag" Width="1.5" PointX="3.75" PointY="1" />
+        <EntityTypeShape EntityType="RegisterModel.cmsTask" Width="1.5" PointX="11.25" PointY="30" />
+        <EntityTypeShape EntityType="RegisterModel.cmsTaskType" Width="1.5" PointX="9" PointY="12.875" />
+        <EntityTypeShape EntityType="RegisterModel.cmsTemplate" Width="1.5" PointX="8.25" PointY="45.125" />
+        <EntityTypeShape EntityType="RegisterModel.Signup" Width="1.5" PointX="8.75" PointY="8.75" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoAccess" Width="1.5" PointX="8.25" PointY="51.25" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoAccessRule" Width="1.5" PointX="10.5" PointY="51.625" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoCacheInstruction" Width="1.5" PointX="9.75" PointY="5.75" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoDomain" Width="1.5" PointX="8.25" PointY="60.5" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoExternalLogin" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoLanguage" Width="1.5" PointX="0.75" PointY="5" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoLock" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoLog" Width="1.5" PointX="10.75" PointY="8.75" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoMigration" Width="1.5" PointX="2.75" PointY="11.75" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoNode" Width="1.5" PointX="6" PointY="23.5" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoRedirectUrl" Width="1.5" PointX="11.75" PointY="3.75" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoRelation" Width="1.5" PointX="11.25" PointY="26.25" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoRelationType" Width="1.5" PointX="9" PointY="36.375" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoServer" Width="1.5" PointX="4.75" PointY="11.75" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoUser" Width="1.5" PointX="6" PointY="16.75" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoUser2NodeNotify" Width="1.5" PointX="8.25" PointY="26.625" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoUserGroup" Width="1.5" PointX="8.25" PointY="21.75" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoUserGroup2App" Width="1.5" PointX="10.5" PointY="19.875" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoUserGroup2NodePermission" Width="1.5" PointX="13.5" PointY="22.75" />
+        <EntityTypeShape EntityType="RegisterModel.umbracoUserStartNode" Width="1.5" PointX="11.25" PointY="22.5" />
+        <AssociationConnector Association="RegisterModel.FK_cmsContent_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsContentType_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsDataType_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsDocument_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsDocumentType_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsLanguageText_umbracoLanguage_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsMacroProperty_cmsMacro_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsMember_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsMemberType_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsPropertyData_cmsPropertyType_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsPropertyData_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsPropertyType_cmsPropertyTypeGroup_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsTagRelationship_cmsPropertyType" />
+        <AssociationConnector Association="RegisterModel.FK_cmsTagRelationship_cmsTags_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsTags_cmsTags" />
+        <AssociationConnector Association="RegisterModel.FK_cmsTask_cmsTaskType_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsTask_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_cmsTask_umbracoUser" />
+        <AssociationConnector Association="RegisterModel.FK_cmsTask_umbracoUser1" />
+        <AssociationConnector Association="RegisterModel.FK_cmsTemplate_umbracoNode" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoAccess_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoAccess_umbracoNode_id1" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoAccess_umbracoNode_id2" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoAccessRule_umbracoAccess_id" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoDomains_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_startContentId_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_startMediaId_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoNode_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoRelation_umbracoNode" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoRelation_umbracoNode1" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoUser2NodeNotify_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoUserGroup2NodePermission_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoUserStartNode_umbracoNode_id" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoRelation_umbracoRelationType_id" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoUser2NodeNotify_umbracoUser_id" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoUserStartNode_umbracoUser_id" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoUserGroup2App_umbracoUserGroup_id" />
+        <AssociationConnector Association="RegisterModel.FK_umbracoUserGroup2NodePermission_umbracoUserGroup_id" />
+        <AssociationConnector Association="RegisterModel.cmsContentType2ContentType" />
+        <AssociationConnector Association="RegisterModel.cmsMember2MemberGroup" />
+        <AssociationConnector Association="RegisterModel.umbracoUser2UserGroup" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
